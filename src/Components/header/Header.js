@@ -1,13 +1,13 @@
 import React from "react";
 import Logo from "../logo/Logo";
 
-import { HeaderContainer } from "./HeaderStyled";
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <HeaderContainer>
+    <header className={styles.header}>
       <Logo />
-    </HeaderContainer>
+    </header>
   );
 };
 

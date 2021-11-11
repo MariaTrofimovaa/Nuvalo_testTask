@@ -1,9 +1,9 @@
-import styled from "styled-components";
-
-export const CompanyContainer = styled.div`
+.companyContainer{
   display: flex;
   align-items: center;
   margin-bottom: 48px;
+
+}
 
   .companyContent {
     flex-direction: column;
@@ -32,4 +32,4 @@ export const CompanyContainer = styled.div`
     font-size: 12px;
     line-height: 18px;
   }
-`;
+

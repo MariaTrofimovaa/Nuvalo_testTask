@@ -2,23 +2,8 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  /* margin: -18px; */
-  /* margin-left: -9px;
-  margin-bottom: -9px; */
 }
 
-/* .card:nth-child(-n) {
-} */
-
-/* .list:nth-last-child(-n + 1) {
-  background-color: rgb(213, 158, 201);
-  
-} */
-/* .card:not(:last-child){
-  background-color: teal;
-  margin: 0;
-
-} */
 .companyLink {
   text-decoration: none;
   color: #2d2c30;
@@ -49,8 +34,6 @@
   box-shadow: 0px 0px 8px rgba(196, 196, 196, 0.25);
   border-radius: 16px;
 }
-
-
 
 .cardContent {
   margin-bottom: 24px;
@@ -83,4 +66,3 @@
   background-color: #e5e5e5;
   text-transform: uppercase;
 }
-

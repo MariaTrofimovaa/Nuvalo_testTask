@@ -1,23 +1,20 @@
 import React from "react";
-
 import icon from "../../icons/company_icon.png";
-import { CompanyContainer } from "./CompanyStyled";
+
+import styles from "./Company.module.css";
 
 const Company = () => {
-// console.log('props :>> ', props);
-  
   return (
-    <CompanyContainer>
-      <img src={icon} alt="companyIcon" className="companyIcon" />
-      <div className="companyContent">
-        <h2 className="companyTitle">My companies</h2>
-        <p className="companyInfo">
+    <div className={styles.companyContainer}>
+      <img src={icon} alt="companyIcon" className={styles.companyIcon} />
+      <div className={styles.companyContent}>
+        <h2 className={styles.companyTitle}>My companies</h2>
+        <p className={styles.companyInfo}>
           According to the EE Business Register, the following companies are
           related to you.{" "}
         </p>
       </div>
-
-    </CompanyContainer>
+    </div>
   );
 };
 

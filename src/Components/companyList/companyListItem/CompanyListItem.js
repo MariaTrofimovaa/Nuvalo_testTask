@@ -1,29 +1,14 @@
 import React from "react";
-import {
-  addCompanyOperation,
-  getCompanyOperation,
-} from "../../../redux/company/company.operations";
+import { addCompanyOperation } from "../../../redux/company/company.operations";
 import { useDispatch } from "react-redux";
-// import { addCompanyOperation } from "../../../redux/company/company.operations";
-// import { useDispatch, useSelector } from "react-redux";
-// import { getCompanyOperation } from "../../../redux/company/company.operations";
-import // getCompaniesSelector,
-// getRegistryCodeSelector,
-"../../../redux/company/company.selectors";
-// import { CompanyListItemContainer } from "./CompanyListItemStyled";
-// import { AddedListItemContainer } from "./CompanyListItemStyled";
 
 import styles from "./CompanyListItem.module.css";
 
-const CompanyListItem = ({ company, name, registryCode }) => {
-  // console.log("company :>> ", company.id);
+const CompanyListItem = ({ company, name, registryCode, addToCart }) => {
   const dispatch = useDispatch();
-  const addCompany = () => {
-    // console.log("registryCode :>> ", registryCode);
-    // addCompanyOperation(registryCode);
-    dispatch(addCompanyOperation(registryCode));
 
-    dispatch(getCompanyOperation());
+  const addCompany = () => {
+    dispatch(addCompanyOperation(registryCode));
   };
 
   const companyID = company.id;

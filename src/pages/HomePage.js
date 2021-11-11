@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import Main from "../Components/main/Main";
 
 const HomePage = () => {
-    return (
-        <ul>
-            
-        </ul>
-    );
-}
+  return <Main />;
+};
 
 export default HomePage;

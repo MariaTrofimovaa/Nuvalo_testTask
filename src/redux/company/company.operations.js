@@ -27,6 +27,19 @@ export const getCompanyOperation = (company) => async (dispatch) => {
     });
 };
 
+export const addCompanyOperation = (registryCode) => async (dispatch) => {
+  dispatch(addCompanyRequest());
+
+  addCompanyToSystem(registryCode)
+    .then(() => {
+      dispatch(addCompanySuccess());
+      dispatch(getCompanyOperation());
+    })
+    .catch((error) => {
+      dispatch(addCompanyError(error.message));
+    });
+};
+
 // export const getCompanyByIdOperation = (id) => async (dispatch) => {
 //   dispatch(getByIdRequest());
 
@@ -40,16 +53,3 @@ export const getCompanyOperation = (company) => async (dispatch) => {
 //     });
 // };
 // addCompanyToSystem();
-
-export const addCompanyOperation = (registryCode) => async (dispatch) => {
-  dispatch(addCompanyRequest());
-
-  addCompanyToSystem(registryCode)
-    .then(({ data }) => {
-      console.log(data);
-      dispatch(addCompanySuccess(data));
-    })
-    .catch((error) => {
-      dispatch(addCompanyError(error.message));
-    });
-};
